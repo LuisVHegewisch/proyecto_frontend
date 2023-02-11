@@ -3,6 +3,13 @@
     margin: 0;
 }
 
+:root{
+    --bs-blue: #037BC0;
+    --bs-green: #8cbc00;
+    --bs-green: #198754;
+    --bs-blue: #d6edfd;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -22,45 +29,18 @@ body {
 .text-center{
     color: #037BC0;
 }
+/*reescribir colores*/
+.text-primary,
+.nombre-sitio{
+    color: var(--bs-blue)!important;
+}
+.bg-primary,
+.btn-primary {
+    background-color: var(--bs-blue)!important;
+}
+
 
 /*navbar*/
-li{
-    list-style: none;
-    
-}
-
-a{
-    text-align: center;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #037BC0;
-}
-.navbar{
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items:center ;
-    justify-content: space-between;
-    text-decoration: none;
-}
-
-.links{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    padding: 1.5rem 0;
-    color: black;
-    border-top: solid 1px #d3d3d3;
-    text-transform: uppercase;
-}
-.navbar .toggle_btn{
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
 
 /*Categoria*/
 .cate{
@@ -101,6 +81,12 @@ a:hover {
     width: 100%;
     object-position: center;
     object-fit: cover;
+    transition-property: transform ;
+    transition-duration: 40ms;
+}
+
+.cat-img:hover{
+    transform: scale(1.4);
 }
 
 .oficina{
@@ -117,6 +103,8 @@ a:hover {
     text-decoration: none;
     text-align: center;
 }
+
+
 
 /*Footer*/
 
@@ -172,83 +160,6 @@ a:hover {
     cursor: pointer;
 }
 
-
-/*menu desplegable*/
-.dropdown_menu {
-    display: none;
-    position: absolute;
-    right: 100;
-    top: 60px;
-    height: 0;
-    width: 360px;
-    background: rgb(219, 219, 219);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 1.275);
-}
-.dropdown_menu li{
-    color: black;
-    border: solid 1px #939292;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-}
-
-/* .navbar-option{
-   list-style: none;
-   text-decoration: none;
-}
-
-.toggle-btn img{
-    max-width: 100%;
-}
-
-.toggle-btn{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-    width: 40px;
-}
-@media screen and (min-width: 768px) {
-    .toggle-btn{
-       display: none;      
-    }  
-}
-
-
-.navbar{
-    width: 100vw;
-    padding: 1.5rem 0;
-}
-.links{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    padding: 1.5rem 0;
-    color: black;
-    border-top: solid 1px #d3d3d3;
-    text-transform: uppercase;
-    list-style: none;
-}
-
-
-.navbar-option:hover {
-    color: palevioletred;
-}
-@media screen and (max-width: 768px) {
-    .links{
-        border: none;
-        flex-direction: column;
-        justify-content: right;        
-    }
-    
-    
-} */
 
 
 .hero{
@@ -308,8 +219,10 @@ a:hover {
     padding: 1rem 1.5rem;
     border-bottom-left-radius: 4px;
     border-top-left-radius: 4px;
-    height: calc(22rem - 2rem);
+    height: 22rem;
+    
 }
+
 
 .description-1 h3 {
     color: white;
@@ -319,7 +232,7 @@ a:hover {
 .description-1 p {
     color: white;
     text-align: center;
-    line-height: 1;
+    
 }
 
 .description-btn {
@@ -362,7 +275,7 @@ a:hover {
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
     padding: 1rem 1.5rem;
-    min-height: 18rem;
+    min-height: 20rem;
 }
 
 .description-2 h3 {
@@ -428,9 +341,14 @@ a:hover {
     text-align: center;
 } 
 
+
+
 /*media query*/
 @media (max-width: 900px) {
     .products {
+        padding: 2rem 6rem;
+    }
+    .categories {
         padding: 2rem 6rem;
     }
 }
@@ -438,27 +356,6 @@ a:hover {
 
 
 @media (max-width: 768px) {
-       
-
-    /* .navbar{
-        width: 100vw;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .navbar-option {
-        border-top: 2px solid rgb(121, 121, 121);
-        width: 20%;
-        text-align: center;
-        text-decoration: none;
-        padding: 1.5rem 0;
-        color: black;
-    }
-    
-    .navbar-option:hover {
-        background-color: rgb(165, 165, 165);
-    }
-     */
      
     .products {
         padding: 2rem 6rem;
@@ -467,6 +364,7 @@ a:hover {
         grid-auto-rows: min-content;
         grid-gap: 3rem;
         height: auto;
+        line-height: normal !important;
     }
 
     .categories {
@@ -546,7 +444,7 @@ a:hover {
         padding: 1rem 1.5rem;
         border-bottom-left-radius: 4px;
         border-top-left-radius: 4px;
-        height: calc(22rem - 2rem);
+        
         
     }
     
@@ -558,7 +456,7 @@ a:hover {
     .description-1 p {
         color: white;
         text-align: center;
-        line-height: 1;
+       
         font-size: 1.2rem;
     }
     
@@ -613,7 +511,7 @@ a:hover {
         padding: 1rem 1.5rem;
         border-top-right-radius: 4px;
         border-top-left-radius: 4px;
-        height: calc(22rem - 2rem);
+        
         
     }
     
@@ -625,7 +523,7 @@ a:hover {
     .description-2 p {
         color: white;
         text-align: center;
-        line-height: 1;
+        
     }
     
     .product-4 {
@@ -678,7 +576,7 @@ a:hover {
         padding: 1rem 1.5rem;
         border-bottom-left-radius: 4px;
         border-top-left-radius: 4px;
-        height: calc(22rem - 2rem);
+        
         
     }
     
@@ -690,7 +588,7 @@ a:hover {
     .description-3 p {
         color: white;
         text-align: center;
-        line-height: 1;
+        
     }
 
  }    

@@ -6,14 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce - Inicio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap">
-    <link rel="stylesheet" href="/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
 
 </head>
@@ -22,45 +19,31 @@
     <header class="title">
         <h1 class="first-text"> Mucho <span class="text-center">Mueble</span></h1>
     </header>
-    <!--menu-->
-    <nav>
-        <div class="navbar">
-            <ul class="links">
-                <li><a href="#">inicio</a></li>
-                <li><a href="#">tienda</a></li>
-                <li><a href="#">galeria</a></li>
-                <li><a href="#">nosotros</a></li>
-                <li><a href="#">contacto</a></li>
-            </ul>
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
 
-            <div class="dropdown_menu">
-                <li><a href="#">inicio</a></li>
-                <li><a href="#">tienda</a></li>
-                <li><a href="#">galeria</a></li>
-                <li><a href="#">nosotros</a></li>
-                <li><a href="#">contacto</a></li>
-            </div>
 
+    <div class="border-top py-4">
+        <div class="navbar navbar-expand-lg container navbar-light ">
+            <a class="navbar-brand nombre-sitio d-lg-none fs-2 fw-bold text-uppercase" href="index.html">
+                Tienda Muebles
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navegacion" class="collapse navbar-collapse">
+                <nav class="navbar-nav container d-flex flex-md-row justify-content-md-between text-center">
+                    <a class="text-dark text-decoration-none" href="#">Inicio</a>
+                    <a class="text-dark text-decoration-none" href="nosotros.html">Nosotros</a>
+                    <a class="text-dark text-decoration-none" href="#">Tienda</a>
+                    <a class="text-dark text-decoration-none" href="#">Blogs</a>
+                    <a class="text-dark text-decoration-none" href="#">Galería</a>
+                    <a class="text-dark text-decoration-none" hrefe="#">Contactos</a>
+                </nav>
+            </div>
         </div>
-    </nav>
-    <!-- <nav>
-        <div class="navbar">
-            <ul class="links">
-                <li><a href="#">inicio</a></li>
-                <li><a href="#">tienda</a></li>
-                <li><a href="#">galeria</a></li>
-                <li><a href="#">nosotros</a></li>
-                <li><a href="#">contacto</a></li>
-            </ul>
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+    </div>
+    <!--fin menu-->
 
-        </div>
-    </nav> -->
+
     <div class="hero"></div>
     <!--menu-->
     <!--products-->
@@ -149,9 +132,8 @@
     </section>
 
 
-    <header class="cate">
-        <h3>Nuestras Categorias</h3>
-    </header>
+
+    <h3 class="cate">Nuestras Categorias</h3>
 
     <section class="categories">
         <div class="categoria-1">
@@ -169,7 +151,7 @@
                 <h3>Hogar</h3>
             </a>
         </div>
-        
+
 
         <div class="categoria-3">
             <img class="cat-img" src="./img//categoria3.jpg" alt="">
@@ -177,10 +159,10 @@
             <a href="#" class="cocina">
                 <h3>Cocina</h3>
             </a>
-        </div>      
+        </div>
     </section>
 
-   
+
 
     <section class="footer">
 
